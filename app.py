@@ -14,7 +14,7 @@ from langchain.chains import LLMChain
 import streamlit as st
 import tempfile
 
-USER_AVATAR = "./test.svg"
+USER_AVATAR = "./user-avatar.svg"
 BOT_AVATAR  = "./bot-avatar.svg"
 
 # -------------------------
