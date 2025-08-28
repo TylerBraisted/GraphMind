@@ -1,3 +1,4 @@
+GraphMind
 <img src="logo.png" alt="GraphMind logo" width="160"/>
 
 GraphMind is a Streamlit app that turns a PDF into a Neo4j knowledge graph and lets you chat over it using a Groq-hosted LLM. It also includes a vector fallback so questions can be answered from the PDF text if the graph route misses.
@@ -64,7 +65,7 @@ Copy the template and fill in values:
 cp .env.example .env
 
 
-Then set:
+Set the variables:
 
 GROQ_API_KEY=...
 NEO4J_URL=bolt+s://<host>:<port>   # or bolt:// for local
@@ -121,7 +122,7 @@ MATCH (n) DETACH DELETE n;
 
 Use a dedicated database for this app, or remove/replace that line if you need to preserve data.
 
-Cypher write protection: The QA chain is created with allow_dangerous_requests=True in the code you shared. If you care about safety, change it to False and/or validate Cypher to only allow MATCH/RETURN/... (no CREATE/DELETE/SET).
+Cypher write protection: The QA chain is created with allow_dangerous_requests=True. For safety, set it to False and/or validate generated Cypher to only allow MATCH/RETURN/... (no CREATE/DELETE/SET).
 
 Avatars & logo: If images are missing locally, update the paths in app.py or add fallbacks.
 
@@ -152,5 +153,3 @@ Add a license you prefer (MIT is common for personal projects).
 Acknowledgements
 
 Built with LangChain, Neo4j, Streamlit, Groq, and sentence-transformers.
-
-If you want this trimmed down or tailored for GitHub’s front page (badges, screenshot, etc.), tell me your preferences and I’ll adjust.
