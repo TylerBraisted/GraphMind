@@ -44,3 +44,15 @@ cd GraphMind
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+```
+
+**macOS/Linux:**
+```bash
+git clone https://github.com/<YOUR_USERNAME>/GraphMind.git
+cd GraphMind
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
