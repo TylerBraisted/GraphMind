@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>Bot Avatar</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDBA74"></stop>
+      <stop offset="100%" stop-color="#F59E0B"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="24" cy="24" r="24" fill="url(#bg)"></circle>
+  <!-- Subtle ring -->
+  <circle cx="24" cy="24" r="23" fill="none" stroke="#FFFFFF" stroke-opacity=".18"></circle>
+
+  <!-- Antenna -->
+  <circle cx="24" cy="9.5" r="1.8" fill="#FFFFFF" opacity=".95"></circle>
+  <rect x="23.4" y="11" width="1.2" height="2.6" rx="0.6" fill="#FFFFFF" opacity=".95"></rect>
+
+  <!-- Faceplate -->
+  <rect x="11" y="14" width="26" height="16" rx="6" fill="#FFFFFF"></rect>
+
+  <!-- Eyes -->
+  <circle cx="18.5" cy="22" r="3" fill="#111111"></circle>
+  <circle cx="29.5" cy="22" r="3" fill="#111111"></circle>
+  <!-- tiny eye highlights -->
+  <circle cx="17.7" cy="21.2" r=".7" fill="#FFFFFF" opacity=".9"></circle>
+  <circle cx="28.7" cy="21.2" r=".7" fill="#FFFFFF" opacity=".9"></circle>
+
+  <!-- Soft highlight -->
+  <ellipse cx="16" cy="10" rx="10.5" ry="6" fill="#FFFFFF" opacity=".06"></ellipse>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <title>User Avatar</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"></stop>
+      <stop offset="100%" stop-color="#2563EB"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="20" cy="20" r="20" fill="url(#bg)"></circle>
+  <!-- Subtle outer ring -->
+  <circle cx="20" cy="20" r="19" fill="none" stroke="#FFFFFF" stroke-opacity=".22"></circle>
+
+  <!-- Head -->
+  <circle cx="20" cy="14.5" r="6.2" fill="#FFFFFF"></circle>
+
+  <!-- Shoulders -->
+  <path d="M8.6 31.2c1.6-6.2 6.9-10.2 11.4-10.2s9.8 4 11.4 10.2H8.6z" fill="#FFFFFF" fill-opacity=".97"></path>
+
+  <!-- Soft highlight -->
+  </svg>

@@ -1,0 +1,10 @@
+streamlit
+python-dotenv
+langchain
+langchain-community
+langchain-experimental
+langchain-groq
+langchain-huggingface
+sentence-transformers
+neo4j
+pypdf
