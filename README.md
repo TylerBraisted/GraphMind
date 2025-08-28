@@ -55,18 +55,69 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-### 3) Configure enviornment
+
+### 3) Configure environment
+
 Copy the template and fill in values:
 
+```bash
 cp .env.example .env
+Set the variables in `.env`:
+```
 
-
-Set the variables in .env:
-
+```bash
 GROQ_API_KEY=...
 NEO4J_URL=bolt+s://<host>:<port>   # or bolt:// for local
 NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=...
-
+```
 ### 4) Run
+
+```bash
 streamlit run app.py
+```
+
+## How to use (in-app flow)
+
+**Screen 1 – Connect**  
+- Enter Groq API key → click **Connect Groq API**  
+- Enter Neo4j URL / Username / Password → click **Connect to Neo4j**  
+- When both are connected, the app switches to Screen 2.  
+
+**Screen 2 – Ingest & Chat**  
+- Upload a PDF. The app will:  
+  - Load & split text (200 chars, 40 overlap)  
+  - Convert chunks into graph documents (`LLMGraphTransformer`)  
+  - Write nodes/edges into Neo4j  
+  - (Best-effort) configure `Neo4jVector` for hybrid search  
+- Ask questions in the chat:  
+  - First try: Cypher-generated query over the graph  
+  - Fallback: Vector similarity over PDF chunks  
+
+---
+
+## Project structure
+```bash
+GraphMind/
+├─ app.py             # Streamlit app (UI, ingest pipeline, QA)
+├─ requirements.txt
+├─ .env.example       # Template for secrets (copy to .env)
+├─ .gitignore
+├─ logo.png           # Logo shown in header
+├─ bot-avatar.svg     # Chat bot avatar
+└─ user-avatar.svg    # Chat user avatar
+```
+
+---
+## License
+
+Add a license you prefer (MIT is common for personal projects).
+
+---
+
+## Acknowledgements
+
+Built with **LangChain, Neo4j, Streamlit, Groq, and sentence-transformers**.
+
+
+
