@@ -55,4 +55,18 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+### 3) Configure enviornment
+Copy the template and fill in values:
 
+cp .env.example .env
+
+
+Set the variables in .env:
+
+GROQ_API_KEY=...
+NEO4J_URL=bolt+s://<host>:<port>   # or bolt:// for local
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=...
+
+### 4) Run
+streamlit run app.py
